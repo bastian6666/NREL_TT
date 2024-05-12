@@ -26,7 +26,8 @@ class DataAnalysis:
         data['Hour'] = data['Hour'].astype(int)
 
         # Group by 'Day' and calculate mean
-        daily_data = data.groupby(['Month', 'Day', 'Hour']).mean()
+        daily_data = data.groupby(['Month', 'Day', 'Hour']).mean().reset_index()
+        print(daily_data)
         return daily_data
 
     def monthly_data(self):
@@ -44,11 +45,11 @@ class DataAnalysis:
         data['Day'] = data['Day'].astype(int)
 
         # Group by both 'Month' and 'Day' and calculate mean
-        monthly_data = data.groupby(['Month', 'Day']).mean()
+        monthly_data = data.groupby(['Month', 'Day']).mean().reset_index()
 
         return monthly_data
     
 # Test
 # DataAnalysis().monthly_data(31.9686, -99.9018, 2012)
-DataAnalysis(31.9686, -99.9018, 2012).daily_data()
+DataAnalysis(31.9686, -99.9018, 2012).monthly_data()
 
