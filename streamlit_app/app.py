@@ -4,7 +4,7 @@ import streamlit as st
 from src.data_analysis import DataAnalysis
 
 st.set_page_config(
-    page_title="Use Pygwalker In Streamlit",
+    page_title="Wind Speed Data Analysis",
     layout="wide"
 )
 
@@ -44,7 +44,7 @@ email = st.secrets['EMAIL']
 st.title('Pygwalker Streamlit App')
 
 # Description
-st.write('This is a Streamlit app that uses Pygwalker to display data analysis for a specific location.')
+st.write('This app allows you to visualize wind speed data for wind turbines clusters in the United States. You can choose to view the data on a map or analyze the data for a specific County in Texas.')
 
 # Map with locations
 df_map = pd.read_csv('app_data/clusters.csv')
