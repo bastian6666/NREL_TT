@@ -83,4 +83,4 @@ pyg_app.explorer()
 
 # Data source
 st.write("Windspeed Data Source: https://www.nrel.gov/grid/wind-toolkit.html")
-sr.write("Wind Turbines Data Source: https://eerscmap.usgs.gov/uswtdb/")
+st.write("Wind Turbines Data Source: https://eerscmap.usgs.gov/uswtdb/")
